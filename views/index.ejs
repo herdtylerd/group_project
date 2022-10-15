@@ -42,17 +42,19 @@
             <div class="main-content">
 
 
-                <h1>Provo Restaurants</h1>
-                <br><br>
+                
+                    <div class="card-cont">
                         <% for (let iCount = 0; iCount < restaurants.length; iCount++) { %> 
                             <div class="card">
-                                <img src="<%= restaurants[iCount].s3 %>" alt="Avatar" style="width:100%">
+                                <img src="<%= restaurants[iCount].s3 %>" alt="<%= restaurants[iCount].name %>" style="width:100%">
                                 <div class="container">
                                 <h4><b><%= restaurants[iCount].name %></b></h4>
                                 <p><%= restaurants[iCount].type %></p>
                                 </div>
                             </div>
                         <% } %>
+                    </div>
+                        
             </div>
         </div>
 
