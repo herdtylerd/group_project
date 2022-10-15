@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Provo Restaurants</title>
+        <script src="js\jquery-3.6.0.min.js"></script>
+        <script>
+            $(window).scroll(function() {
+                if ($(window).scrollTop() >= 50) {
+                $('.navbar').css('background', 'var(--mydarkblue)');
+                $('.navbar').css('height', '7vh');
+                } else {
+                $('.navbar').css('background', 'transparent');
+                $('.navbar').css('height', '12vh');
+                }
+            });
+        </script>
+
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+
+
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+    <body>
+        <div class="bg-image"></div>
+        <nav class="navbar">
+            <div class="btn-group">
+                <a class="btn" href="#">Home</a>
+            </div>
+        </nav>
+
+        <div class="bg-text">
+            <h1 style="font-size: 3rem;">Provo Restaurants</h1>
+            <p>Best Places to Eat!</p>
+        </div>
+        <div class="main">
+            <div class="main-content">
+                <% for (let iCount = 0; iCount < restaurants.length; iCount++) { %> 
+                    <div class="card">
+                        <!-- <img src="img_avatar.png" alt="Avatar" style="width:100%"> -->
+                        <div class="container">
+                        <h4><b><%= restaurants[iCount].rest_name %></b></h4>
+                        <p><%= restaurants[iCount].rest_type %></p>
+                        </div>
+                    </div>
+                <% } %>
+
+                <h1>Provo Restaurants</h1>
+                <br><br>
+                    <table>
+                        <tr>
+                            <th>Restaurant Type</th>
+                            <th>Restaurant Name</th>
+                        </tr>
+                        <% for (let iCount = 0; iCount < restaurants.length; iCount++) { %>          
+                            <tr>
+                                <td><%= restaurants[iCount].rest_type %></td>
+                                <td><%= restaurants[iCount].rest_name %></td>
+                            </tr>
+                        <% } %>
+                        <!-- <tr>
+                            <% for (let iCount = 0; iCount < restaurants.length; iCount++) { %>
+                                <td><%= restaurants[iCount].rest_name %></td>
+                            <% } %>
+                        </tr> -->
+                        
+                    </table>
+            </div>
+        </div>
+
+        <footer>
+            Tyler Herd, Madaleine Osmun, Becca Reese, Joshua Gardner
+            
+        </footer>
+    </body>
+</html>
