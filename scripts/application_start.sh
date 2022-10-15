@@ -14,8 +14,8 @@ export NVM_DIR="$HOME/.nvm"
 #install node modules
 sudo yum -y nodejs
 npm install
-npm i knex
-npm i mysql
+#npm i knex
+#npm i mysql
 npm i ejs
 
 #start our node app in the background
