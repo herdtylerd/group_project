@@ -46,10 +46,19 @@
                 <br><br>
                     <table>
                         <tr>
-                            <th>Restaurant Type</th>
                             <th>Restaurant Name</th>
+                            <th>Restaurant Type</th>
                         </tr>
-
+                        <% for (let iCount = 0; iCount < restaurants.length; iCount++) { %> 
+                            <div class="card">
+                                <img src="<%= restaurants[iCount].s3 %>" alt="Avatar" style="width:100%">
+                                <div class="container">
+                                <h4><b><%= restaurants[iCount].name %></b></h4>
+                                <p><%= restaurants[iCount].type %></p>
+                                </div>
+                            </div>
+                        <% } %>
+        
                         
                     </table>
             </div>
