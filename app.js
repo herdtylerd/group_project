@@ -1,5 +1,3 @@
-const {Restaurant} = require("./myrestaurants");
-
 const express = require("express");
 
 //const ejsLint = require('ejs-lint');
@@ -17,12 +15,9 @@ app.use(express.static(__dirname + '/public/'));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    let restaurants = new Array();
 
-    restaurants.push(new Restaurant("American", "J-Dawgs"));
-    restaurants.push(new Restaurant("American", "JCW's"));
 
-    res.render("index", {restaurants : restaurants});
+    res.render("index");
 });
 
 app.listen(port, () => console.log("Website has started!"));
