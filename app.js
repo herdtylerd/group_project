@@ -1,6 +1,6 @@
 const express = require("express");
 
-//const ejsLint = require('ejs-lint');
+//const ejsLint = require('ejs-lint'); 
 
 let app = express();
 
